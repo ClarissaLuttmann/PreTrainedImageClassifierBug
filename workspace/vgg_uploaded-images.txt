@@ -1,0 +1,88 @@
+Path to Image Folder: uploaded_images/
+Path to CNN Model Architecture: vgg
+Path to Text File with Dog Names: dognames.txt
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Printing: All 'key' - 'value' pairs in dictionary results_dic: 
+Filename =  Dog_01.jpg    Pet Label =  ['dog']
+Filename =  Dog_02.jpg    Pet Label =  ['dog']
+Filename =  Coffee__machine_01.jpg    Pet Label =  ['coffee machine']
+Filename =  Butterfly_01.jpg    Pet Label =  ['butterfly']
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                     Dog_01.jpg  label:                        dog
+ 2 key:                     Dog_02.jpg  label:                        dog
+ 3 key:         Coffee__machine_01.jpg  label:             coffee machine
+ 4 key:               Butterfly_01.jpg  label:                  butterfly
+{'Dog_01.jpg': ['dog', 'Chihuahua', 0], 'Dog_02.jpg': ['dog', 'Chihuahua', 0], 'Coffee__machine_01.jpg': ['coffee machine', 'espresso maker', 0], 'Butterfly_01.jpg': ['butterfly', 'monarch, monarch butterfly, milkweed butterfly, Danaus plexippus', 1]}
+
+     MATCH:
+
+              Butterfly_01.jpg: 
+Real:                  butterfly   Classifier: monarch, monarch butterfly, milkweed butterfly, Danaus plexippus
+
+ NOT A MATCH:
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:                      Chihuahua
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:                      Chihuahua
+
+        Coffee__machine_01.jpg: 
+Real:             coffee machine   Classifier:                 espresso maker
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+{'Dog_01.jpg': ['dog', 'Chihuahua', 0, 1, 0], 'Dog_02.jpg': ['dog', 'Chihuahua', 0, 1, 0], 'Coffee__machine_01.jpg': ['coffee machine', 'espresso maker', 0, 0, 0], 'Butterfly_01.jpg': ['butterfly', 'monarch, monarch butterfly, milkweed butterfly, Danaus plexippus', 1, 0, 0]}
+
+     MATCH:
+
+              Butterfly_01.jpg: 
+Real:                  butterfly   Classifier: monarch, monarch butterfly, milkweed butterfly, Danaus plexippus  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:                      Chihuahua  
+PetLabelDog: 1  ClassLabelDog: 0
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier:                      Chihuahua  
+PetLabelDog: 1  ClassLabelDog: 0
+
+        Coffee__machine_01.jpg: 
+Real:             coffee machine   Classifier:                 espresso maker  
+PetLabelDog: 0  ClassLabelDog: 0
+
+# Total Images 4 # Matches: 1 # NOT Matches: 3
+{'n_dogs_img': 2, 'n_match': 1, 'n_correct_dogs': 0, 'n_correct_notdogs': 2, 'n_correct_breed': 0, 'n_images': 4, 'n_notdogs_img': 2, 'pct_match': 25.0, 'pct_correct_dogs': 0.0, 'pct_correct_breed': 0.0, 'pct_correct_notdogs': 100.0}
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:   0.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:   0.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+
+*** Results Summary for CNN Model Architecture VGG ***
+N Images            :   4
+N Dog Images        :   2
+N Not-Dog Images    :   2
+ 
+pct_match 25.0
+pct_correct_dogs 0.0
+pct_correct_breed 0.0
+pct_correct_notdogs 100.0
+
+INCORRECT Dog/NOT Dog Assignments:
+dog Chihuahua
+dog Chihuahua
+
+** Total Elapsed Runtime: 0:0:3
